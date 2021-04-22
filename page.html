@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Auto-Pharm</title>
+    <link rel="stylesheet" type="text/css" href="pagestyle.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="timeAxis1.css">
+</head>
+<body>
+
+
+
+    <!--分类-->
+    <div class="classes-wrap content clearfix">
+
+        <div class="classes-item active">
+            <i class="icon icon-login"></i>
+            <span class="text">Setting</span>
+        </div>
+
+        <div class="classes-item">
+            <i class="icon icon-config"></i>
+            <span class="text">Schedule</span>
+        </div>
+
+        <div class="classes-item">
+            <i class="icon icon-award"></i>
+            <span class="text">Storage</span>
+        </div>
+
+        <div class="classes-item">
+            <i class="icon icon-logout"></i>
+            <input class="btn"type="button" value="Logout" onclick="Logout()">
+        </div>
+        
+
+
+
+
+
+    </div>
+    <!--内容-->
+    <!--1-->
+    <div class="list-wrap content active">
+        <h3 class="classes-title list-title">
+            <i class="icon-question"></i>
+            <span class="list-title-text">Setting</span>
+        </h3>
+        <div id="list-wrap-content">
+            <div class="list-content">
+
+                <input class="butt" type="button" value="Add Medication Schedule" onclick="CreateNewSelect()"> <!--class="Add"-->
+                <input class="butt"type="button" value="Update" onclick="UpdateDataset()">
+                <table id="addTable">
+                    <tbody id="templeteTBody">
+                        <tr>
+                            <!--<td>a</td>-->
+                            <td>
+                                <select id="type" class="types">
+                                    <option value="1">-Type-</option>
+
+                                    <option value="2">A</option>
+
+                                    <option value="3">B</option>
+
+                                    <option value="4">C</option>
+
+                                </select>
+                            </td>
+                            <td>
+                                <select id="hour" class="hours">
+                                    <option value="1"> -Hour-</option>
+                                    <option value="2">01</option>
+                                    <option value="3">02</option>
+                                    <option value="4">03</option>
+                                    <option value="5">04</option>
+                                    <option value="6">05</option>
+                                    <option value="7">06</option>
+                                    <option value="8">07</option>
+                                    <option value="9">08</option>
+                                    <option value="10">09</option>
+                                    <option value="11">10</option>
+                                    <option value="12">11</option>
+                                    <option value="13">12</option>
+                                    <option value="14">13</option>
+                                    <option value="15">14</option>
+                                    <option value="16">15</option>
+                                    <option value="17">16</option>
+                                    <option value="18">17</option>
+                                    <option value="19">18</option>
+                                    <option value="20">19</option>
+                                    <option value="21">20</option>
+                                    <option value="22">21</option>
+                                    <option value="23">22</option>
+                                    <option value="24">23</option>
+                                    <option value="25">24</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="minute" class="minutes" >
+                                    <option>-Minute-</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                    <option>13</option>
+                                    <option>14</option>
+                                    <option>15</option>
+                                    <option>16</option>
+                                    <option>17</option>
+                                    <option>18</option>
+                                    <option>19</option>
+                                    <option>20</option>
+                                    <option>21</option>
+                                    <option>22</option>
+                                    <option>23</option>
+                                    <option>24</option>
+                                    <option>25</option>
+                                    <option>26</option>
+                                    <option>27</option>
+                                    <option>28</option>
+                                    <option>29</option>
+                                    <option>30</option>
+                                    <option>31</option>
+                                    <option>32</option>
+                                    <option>33</option>
+                                    <option>34</option>
+                                    <option>35</option>
+                                    <option>36</option>
+                                    <option>37</option>
+                                    <option>38</option>
+                                    <option>39</option>
+                                    <option>40</option>
+                                    <option>41</option>
+                                    <option>42</option>
+                                    <option>43</option>
+                                    <option>44</option>
+                                    <option>45</option>
+                                    <option>46</option>
+                                    <option>47</option>
+                                    <option>48</option>
+                                    <option>49</option>
+                                    <option>50</option>
+                                    <option>51</option>
+                                    <option>52</option>
+                                    <option>53</option>
+                                    <option>54</option>
+                                    <option>55</option>
+                                    <option>56</option>
+                                    <option>57</option>
+                                    <option>58</option>
+                                    <option>59</option>
+                                    <option>60</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="dosages" id="dosage" >
+                                    <option>-Dosage(pill/time)-</option>
+
+                                    <option>1 </option>
+                                    <option>2 </option>
+                                    <option>3 </option>
+                                    <option>4 </option>
+                                    <option>5 </option>
+                                    <option>6 </option>
+                                    <option>7 </option>
+                                    <option>8 </option>
+                                    <option>9 </option>
+                                    <option>10 </option>
+        
+
+                                </select>
+                            </td>
+
+                            <td><input  class="lpl" type="button" value="Delete" onclick="deleteRow(this)" /></td>
+                        </tr>
+                    </tbody>
+                    <tbody id="footTbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--2-->
+    <div class="list-wrap content">
+        <h3 class="classes-title list-title">
+            <i class="icon-question"></i>
+            <span class="list-title-text">Schedule</span>
+        </h3>
+        <div id="list-wrap-content">
+            <div class="list-content">
+                <div class="cx-time-main" id="cxTime"></div>
+                <script type="text/javascript" src="jquery.min.js"></script>
+                <script type="text/javascript" src="timeAxis1.js"></script>
+                <script type="text/javascript">
+                    var oTimeAxiosFun = null;
+                    $(function () {                                         
+                        firebase.database().ref('/User/').on('value', (snap) => {
+                            var uid2 = auth.currentUser.uid;
+                            console.log(uid2);
+                            firebase.database().ref('/User/'+uid2).on('value', (snap) => {
+                                var c = snap.val();
+                                var currentMachinecode = c.MachineCode;
+                                console.log(currentMachinecode);
+                                firebase.database().ref('/Schedule/').on('value', (snap) => {
+                                    var uiduser = auth.currentUser.uid;
+                                    console.log(uiduser);
+                                    var Nodenumber = snap.numChildren(); 
+                                    console.log(Nodenumber);
+                                    var timeList = new Array();
+                                    var n = 0;
+                                    for (var i = 0; i < Nodenumber; i++) {
+                                        firebase.database().ref('/Schedule/' + currentMachinecode + i).on('value', (snap) => {
+                                            var a = snap.val();
+                                            var machineschedule = a.MachineCode;
+                                            console.log(machineschedule);
+                                            if (currentMachinecode == machineschedule) {
+                                                n = n + 1;
+                                                console.log(n);
+                                                //timeList.push("123");                                       
+                                            }
+
+                                        });
+                                    }
+                                    for (var j = 0; j < n; j++) {
+                                        firebase.database().ref('/Schedule/' + currentMachinecode + j).on('value', (snap) => {
+                                            var a = snap.val();
+                                            var machineschedule = a.MachineCode;
+                                            console.log(machineschedule);
+                                            if (currentMachinecode == machineschedule) {
+                                                var dosage = a.Dosage;
+                                                var hour = a.Hour;
+                                                var minute = a.Minute;
+                                                var Times = hour + ":" + minute;
+                                                var type = a.Type;
+                                                timeList.push({ Type: type, Time: Times, Dosage: dosage });
+                                                //timeList.push("123");                                       
+                                            }
+
+                                        });
+                                        console.log(timeList);
+                                    }
+                                    var param = {
+                                        data: timeList, // 数据
+                                        id: 'cxTime', //dom节点ID
+                                        index: 0, // 选中时间节点
+                                        sort: 'just', // 正序just，反序back, 其他表示不排序
+                                        sortKey: 'Time', //排序的参数key
+                                        // activeColor: '#26a69a', // 选中颜色
+                                        props: ['Type', 'Time', 'Dosage'], //展示的key
+                                        then: function (data) {
+                                            console.log(data);
+                                        }, //点击事件回调方法
+                                        // format: function (key, val) {
+                                        // 	console.log(key, val);
+                                        // 	return val
+                                        // }, //数据格式化处理
+                                    }
+                                    oTimeAxiosFun = new oTimeAxios(param);
+                                });
+
+
+                            });
+                           
+                            
+
+
+                        });
+
+
+
+
+                                                                                     
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--3-->
+    <div class="list-wrap content">
+        <h3 class="classes-title list-title">
+            <i class="icon-adduser"></i>
+            <span class="list-title-text">Storage</span>
+        </h3>
+        <div id="list-wrap-content">
+            <div class="list-content">
+                <div class="list-item">
+                    <div id="username">StorageA(Total 20) : </div>
+                    <div id="sa"></div>
+                </div>
+                <div class="list-item">
+                    <div id="username">StorageB(Total 20) :</div>
+                    <div id="sb"></div>
+                </div>
+                <div class="list-item">
+                    <div id="username">StorageC(Total 20) :</div>
+                    <div id="sc"></div>
+                </div>
+                <script type="text/javascript" src="jquery.min.js"></script>
+                <script type="text/javascript" src="jquery.min.js"></script>
+                <script type="text/javascript">
+                    $(function () {
+                        firebase.database().ref('/User/').on('value', (snap) => {
+                            var uid2 = auth.currentUser.uid;
+                            console.log(uid2);
+                            firebase.database().ref('/User/' + uid2).on('value', (snap) => {
+                                var c = snap.val();
+                                var currentMachinecode = c.MachineCode;
+                                console.log(currentMachinecode);
+                                firebase.database().ref('/Storage/' + currentMachinecode).on('value', (snap) => {
+                                    var a = snap.val();
+                                    var storageA = a.StorageA;
+                                    console.log(storageA);
+                                    var storageB = a.StorageB;
+                                    var storageC = a.StorageC;
+                                    document.getElementById("sa").innerHTML = storageA;
+                                    document.getElementById("sb").innerHTML = storageB;
+                                    document.getElementById("sc").innerHTML = storageC;
+                                });
+                            });
+
+                        });
+
+
+
+
+                    })
+
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.classes-wrap .classes-item').click(function () {
+                var i = $(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('.list-wrap').eq(i).addClass('active').siblings().removeClass('active');
+            })
+        })
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+		
+		
+
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+		
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+ 
+		<script>
+			var firebaseConfig = {
+			apiKey: "AIzaSyAQ8x0EXBu7I5JS4TKRBS9u_0sOsxxC50k",
+			authDomain: "auto-pharm.firebaseapp.com",
+			databaseURL: "https://auto-pharm.firebaseio.com",
+			projectId: "auto-pharm",
+			storageBucket: "auto-pharm.appspot.com",
+			messagingSenderId: "850843664199",
+			appId: "1:850843664199:web:d8fdf94e481fae3e029662",
+			measurementId: "G-B4ZFQ6LQVD"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			// make auth and firestore references
+            const auth = firebase.auth();
+            const db = firebase.database();
+		</script>
+    <script src="page.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+<style type='text/css'>
+
+    .btn {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+
+    
+    .butt{
+        width: 33%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .minutes {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .lpl {
+        width: 100%;
+        background: none;
+        border: 2px solid ;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .types {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .hours {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+    .dosages {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+</style>
+
+
+
+<script>
+    var row_count=1;
+  
+    function CreateNewSelect() {
+        var table = document.getElementById("addTable");
+        row_count++;
+        var tbody = document.getElementById("templeteTBody");
+        var newTBody = tbody.cloneNode(true);
+        newTBody.style.display = "";
+        var footTBody = document.getElementById("footTbody");
+       
+        return table.insertBefore(newTBody, footTBody);
+    }
+
+    function deleteRow(obj) {
+        var tbody = obj.parentNode.parentNode.parentNode;
+        var table = document.getElementById("addTable");
+        table.removeChild(tbody);
+        row_count--;
+        //window.alert("row count is " + row_count);
+    }
+
+
+</script>
+
+

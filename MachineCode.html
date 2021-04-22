@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset charset="utf-8">
+    <title> This is the machine code page </title>
+    
+</head>
+<body>
+    <div class="machinecode-box">
+        <h1> <font color=#4caf50>Link</font></h1>
+        <div class="textbox">
+            <input id="MCemail" type="text" placeholder="Email" name="" value="">
+        </div>
+        <div class="textbox">
+            <input id="machinecode" type="text" placeholder="MachineCode" name="" value="">
+        </div>
+
+        <input class="btn2" type="button" name="" value="Add Machine Code" onclick="AddMachineCode()">
+        <input class="btn" type="button" name="" value="Link" onclick="LinkToPage()">
+		<input class="signout_btn" type="button" name="" value="Log out" onclick="Logout()">
+
+    </div>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+		
+		
+
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+		
+		<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+ 
+		<script>
+			var firebaseConfig = {
+			apiKey: "AIzaSyAQ8x0EXBu7I5JS4TKRBS9u_0sOsxxC50k",
+			authDomain: "auto-pharm.firebaseapp.com",
+			databaseURL: "https://auto-pharm.firebaseio.com",
+			projectId: "auto-pharm",
+			storageBucket: "auto-pharm.appspot.com",
+			messagingSenderId: "850843664199",
+			appId: "1:850843664199:web:d8fdf94e481fae3e029662",
+			measurementId: "G-B4ZFQ6LQVD"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+			// make auth and firestore references
+            const auth = firebase.auth();
+            const db = firebase.database();
+            //db.settings({ timestampsInSnapshots: true });
+	
+
+			// update firestore settings
+		
+		</script>
+		
+		 <!-- Compiled and minified JavaScript -->
+        <script src="MachineCode.js"></script>
+		<script src="index.js"></script>
+		
+</body>
+
+<style type='text/css'>
+
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(logo.png) no-repeat;
+        background-size: auto;
+    }
+
+    .machinecode-box{
+        width: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: black;
+    }
+
+    .machinecode-box h1 {
+            front-size: 40px;
+            border-bottom: 6xp solid #4caf50;
+            margin-bottom: 50px; padding: 13px 0;
+        }
+
+    .textbox {
+        width: 100%;
+        overflow: hidden;
+        frone-size: 20px;
+        padding: 8px 0;
+        margin: 8px, 0;
+        border-bottom: 1px solid #4caf50;
+    }
+
+        .textbox i {
+            width: 26px;
+            float: left;
+            text-align: center;
+        }
+
+        .textbox input {
+            border: none;
+            outline: none;
+            background: none;
+            color: grey;
+            font-size: 18px;
+            width: 80%;
+            float: left;
+            margin: 10px;
+        }
+
+    .btn, .signout_btn, .btn2 {
+        width: 100%;
+        background: none;
+        border: 2px solid #4caf50;
+        color: grey;
+        padding: 5px;
+        front-size: 18px;
+        cursor: pointer;
+        margin: 12px 0;
+    }
+</style>
+</html>
